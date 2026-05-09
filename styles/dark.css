@@ -1,0 +1,60 @@
+body {
+  background-color: #1a1a2e;
+  color: #e0e0e0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #16213e;
+  color: #e0e0e0;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 { margin: 0; }
+
+#btn-settings {
+  background: #0f3460;
+  color: #e0e0e0;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#posts-container {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.objava {
+  background: #16213e;
+  border-radius: 10px;
+  padding: 16px;
+  border-left: 4px solid #e94560;
+}
+
+.objava-header {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.avtor { font-weight: bold; color: #e94560; }
+.datum { color: #888; }
+.vidnost {
+  background: #0f3460;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.vsebina { margin: 0; font-size: 15px; }
