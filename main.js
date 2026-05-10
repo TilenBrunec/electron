@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain, dialog } = require("electron");
+const { app, BrowserWindow, ipcMain, dialog, protocol, session } = require("electron");
 const path = require("path");
 const fsp = require("fs/promises");
 const fs = require("fs");
@@ -65,7 +65,35 @@ ipcMain.handle("load-json-file", async (event, filePath) => {
   }
 });
 
-app.whenReady().then(createWindow);
+app.whenReady().then(() => {
+  protocol.handle("app", async (request) => {
+    const urlPath = request.url.replace("app://", "");
+    const resolved= path.normalize(path.join(__dirname, urlPath));
+    if (!resolved.startsWith(__dirname)) {
+      throw new Response("Neavtoriziran dostop", { status: 403 });
+    }
+    try {
+      const file = await fsp.readFile(resolved);
+      return new Response(file , {status: 200});
+    } catch {
+      throw new Response("Datoteka ni najdena", { status: 404 });
+    }
+  })
+
+  session.defaultSession.webRequest.onHeadersReceived((details, callback) => {
+    callback({
+      responseHeaders: {
+        ...details.responseHeaders,
+        'Content-Security-Policy': [
+          "default-src 'self' app:; script-src 'self' app:; style-src 'self' app:; img-src 'self' app: data:"
+        ]
+      }
+    })
+  })
+
+  createWindow()
+})
+
 app.on("window-all-closed", () => {
   if (process.platform !== "darwin") app.quit();
 });

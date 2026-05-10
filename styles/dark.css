@@ -1,60 +1,152 @@
-body {
-  background-color: #1a1a2e;
-  color: #e0e0e0;
-  font-family: Arial, sans-serif;
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+body {
+  background-color: #18191a;
+  color: #e4e6eb;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+}
+
 header {
-  background-color: #16213e;
-  color: #e0e0e0;
-  padding: 16px 24px;
+  background: linear-gradient(135deg, #242526, #3a3b3c);
+  color: #e4e6eb;
+  padding: 14px 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-header h1 { margin: 0; }
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
-#btn-settings {
-  background: #0f3460;
-  color: #e0e0e0;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 6px;
+.logo { font-size: 28px; }
+
+header h1 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.header-right {
+  display: flex;
+  gap: 10px;
+}
+
+header button {
+  background: rgba(255,255,255,0.1);
+  color: #e4e6eb;
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 8px 18px;
+  border-radius: 20px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+header button:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+main {
+  max-width: 680px;
+  margin: 32px auto;
+  padding: 0 16px;
 }
 
 #posts-container {
-  padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
 .objava {
-  background: #16213e;
-  border-radius: 10px;
-  padding: 16px;
-  border-left: 4px solid #e94560;
+  background: #242526;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  transition: box-shadow 0.2s;
+}
+
+.objava:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
 .objava-header {
   display: flex;
-  gap: 16px;
-  margin-bottom: 8px;
-  font-size: 13px;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
 }
 
-.avtor { font-weight: bold; color: #e94560; }
-.datum { color: #888; }
-.vidnost {
-  background: #0f3460;
-  padding: 2px 8px;
-  border-radius: 10px;
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3a3b3c, #4a4b4c);
+  color: #e4e6eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.objava-info { flex: 1; }
+
+.avtor {
+  font-weight: 700;
+  color: #e4e6eb;
+  font-size: 15px;
+  display: block;
+}
+
+.meta {
+  display: flex;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.datum {
+  color: #888;
   font-size: 12px;
 }
 
-.vsebina { margin: 0; font-size: 15px; }
+.kategorija {
+  background: #263951;
+  color: #4a90d9;
+  padding: 1px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.vsebina {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 14px;
+}
+
+.objava-footer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-top: 12px;
+  border-top: 1px solid #3a3b3c;
+  color: #888;
+  font-size: 13px;
+}
+
+.likes-icon { color: #e0245e; font-size: 15px; }
