@@ -1,0 +1,7 @@
+[
+  { "avtor": "Tiki Eld", "vsebina": "Pozdravljen svet!", "datum": "10.3.2026", "likes": 5, "slika": null, "kategorija": "Splošno" },
+  { "avtor": "Ana Novak", "vsebina": "Lep dan za kavo ", "datum": "11.3.2026", "likes": 12, "slika": null, "kategorija": "Lifestyle" },
+  { "avtor": "Miha Horvat", "vsebina": "Novi projekt je live!", "datum": "12.3.2026", "likes": 34, "slika": null, "kategorija": "Tehnologija" },
+  { "avtor": "Sara Kovač", "vsebina": "Kdo gre jutri na izlet?", "datum": "13.3.2026", "likes": 8, "slika": null, "kategorija": "Prosti čas" },
+  { "avtor": "Jure Mali", "vsebina": "Priporočam to knjigo vsem!", "datum": "14.3.2026", "likes": 21, "slika": null, "kategorija": "Kultura" }
+]

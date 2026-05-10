@@ -1,0 +1,7 @@
+[
+  { "avtor": "Maja Zupan", "vsebina": "Danes sem tekla 10km ", "datum": "1.4.2026", "likes": 45, "slika": null, "kategorija": "Sport" },
+  { "avtor": "Luka Petek", "vsebina": "Nova pesem je izšla!", "datum": "2.4.2026", "likes": 67, "slika": null, "kategorija": "Glasba" },
+  { "avtor": "Nina Vrh", "vsebina": "Recept za najboljšo pico ", "datum": "3.4.2026", "likes": 89, "slika": null, "kategorija": "Hrana" },
+  { "avtor": "Rok Bole", "vsebina": "Vikend v gorah je bil čudovit!", "datum": "4.4.2026", "likes": 33, "slika": null, "kategorija": "Potovanja" },
+  { "avtor": "Eva Kos", "vsebina": "Pravkar sem diplomirala! ", "datum": "5.4.2026", "likes": 102, "slika": null, "kategorija": "Splošno" }
+]

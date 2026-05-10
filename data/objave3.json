@@ -1,0 +1,7 @@
+[
+  { "avtor": "Tomo Kralj", "vsebina": "AI je prihodnost!", "datum": "1.5.2026", "likes": 55, "slika": null, "kategorija": "Tehnologija" },
+  { "avtor": "Petra Sok", "vsebina": "Poletje prihaja!", "datum": "2.5.2026", "likes": 78, "slika": null, "kategorija": "Lifestyle" },
+  { "avtor": "Bine Lap", "vsebina": "Novo podjetje odprto!", "datum": "3.5.2026", "likes": 91, "slika": null, "kategorija": "Biznis" },
+  { "avtor": "Anja Mer", "vsebina": "Najboljši film leta", "datum": "4.5.2026", "likes": 44, "slika": null, "kategorija": "Kultura" },
+  { "avtor": "Gašper Rot", "vsebina": "Maraton končan, cilj dosežen!", "datum": "5.5.2026", "likes": 120, "slika": null, "kategorija": "Sport" }
+]

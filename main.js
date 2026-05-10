@@ -1,5 +1,8 @@
-const { app, BrowserWindow, ipcMain } = require("electron");
+const { app, BrowserWindow, ipcMain, dialog } = require("electron");
 const path = require("path");
+const fsp = require("fs/promises");
+const fs = require("fs");
+const Zadni_file = path.join(__dirname, "lastFile.txt");
 
 let mainWindow;
 
@@ -30,6 +33,36 @@ ipcMain.on("open-settings", () => {
 
 ipcMain.on("theme-changed", (event, theme) => {
   mainWindow.webContents.send("apply-theme", theme);
+});
+
+ipcMain.on("save-last-path", (event, filePath) => {
+  fs.writeFileSync(Zadni_file, filePath);
+});
+
+ipcMain.handle("get-last-path", () => {
+  try {
+    return fs.readFileSync(Zadni_file, "utf8");
+  } catch {
+    return null;
+  }
+});
+
+ipcMain.handle("open-file-dialog", async () => {
+  const restulr = await dialog.showOpenDialog(mainWindow, {
+    properties: ["openFile"],
+    filters: [{ name: "JSON", extensions: ["json"] }],
+  });
+  if (restulr.canceled) return;
+  return restulr.filePaths[0];
+});
+
+ipcMain.handle("load-json-file", async (event, filePath) => {
+  try {
+    const data = await fsp.readFile(filePath, "utf8");
+    return JSON.parse(data);
+  } catch {
+    return null;
+  }
 });
 
 app.whenReady().then(createWindow);
