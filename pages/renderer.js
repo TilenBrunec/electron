@@ -36,6 +36,7 @@ function prikaziObjave(seznam) {
         <span class="kategorija">${objava.kategorija}</span>
       </div>
       <p class="vsebina">${objava.vsebina}</p>
+      <img class="objava-slika" src="app://images/post.jpg" alt="slika"/>
       <div class="objava-footer">
         <span class="likes"> ${objava.likes} likes</span>
       </div>
@@ -52,8 +53,6 @@ window.appAPI.onThemeChanged((theme) => {
   document.body.className = theme;
   document.getElementById("theme-css").href = `../styles/${theme}.css`;
 });
-
-prikaziObjave(objave);
 
 document.getElementById("btn-load").addEventListener("click", async () => {
   const filePath = await window.appAPI.openFileDialog()

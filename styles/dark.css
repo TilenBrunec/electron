@@ -12,50 +12,44 @@ body {
 }
 
 header {
-  background: linear-gradient(135deg, #242526, #3a3b3c);
-  color: #e4e6eb;
-  padding: 14px 32px;
+  background: linear-gradient(135deg, #1877f2, #4a90d9);
+  color: white;
+  padding: 14px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   position: sticky;
   top: 0;
   z-index: 100;
+  flex-wrap: wrap;
+  gap: 8px;
 }
-
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.logo { font-size: 28px; }
 
 header h1 {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
 }
 
 .header-right {
   display: flex;
-  gap: 10px;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 header button {
-  background: rgba(255,255,255,0.1);
-  color: #e4e6eb;
-  border: 1px solid rgba(255,255,255,0.2);
-  padding: 8px 18px;
+  background: rgba(255,255,255,0.15);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 7px 14px;
   border-radius: 20px;
   cursor: pointer;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   transition: background 0.2s;
-}
-
-header button:hover {
-  background: rgba(255,255,255,0.2);
+  white-space: nowrap;
 }
 
 main {
@@ -150,3 +144,10 @@ main {
 }
 
 .likes-icon { color: #e0245e; font-size: 15px; }
+.objava-slika {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 14px;
+}

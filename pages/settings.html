@@ -4,27 +4,20 @@
   <meta charset="UTF-8">
   <title>Nastavitve</title>
   <link id="theme-css" rel="stylesheet" href="../styles/light.css">
-  <style>
-    body { padding: 30px; }
-    h2 { margin-top: 0; }
-    .btn-row { display: flex; gap: 12px; margin-top: 20px; }
-    button {
-      padding: 10px 24px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 15px;
-    }
-    #btn-light { background: #f0f4f8; color: #111; }
-    #btn-dark  { background: #1a1a2e; color: #e0e0e0; }
-  </style>
+  <link rel="stylesheet" href="../styles/settings.css">
 </head>
 <body>
-  <h2>⚙ Nastavitve</h2>
+  <h2> Nastavitve</h2>
   <p>Izberi barvno shemo:</p>
   <div class="btn-row">
-    <button id="btn-light"> Svetla</button>
-    <button id="btn-dark"> Temna</button>
+    <button class="theme-btn" id="btn-light">
+      <span class="icon"></span>
+      Svetla
+    </button>
+    <button class="theme-btn" id="btn-dark">
+      <span class="icon"></span>
+      Temna
+    </button>
   </div>
   <script src="settings-renderer.js"></script>
 </body>
