@@ -2,23 +2,52 @@
 <html lang="sl">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Socialno omrežje</title>
   <link id="theme-css" rel="stylesheet" href="../styles/light.css">
 </head>
 <body class="light">
 
   <header>
-  <div class="header-left">
-    <span class="logo">F</span>
-    <h1>Socialno omrežje</h1>
-  </div>
-  <div class="header-right">
-    <button id="btn-load"> Naloži podatke</button>
-    <button id="btn-settings"> Nastavitve</button>
-  </div>
-</header>
+    <div class="header-left">
+      <span class="logo">Meet</span>
+      <h1>Socialno omrežje</h1>
+    </div>
+    <div class="header-right">
+      <button id="btn-load"> Naloži podatke</button>
+      <button id="btn-settings"> Nastavitve</button>
+    </div>
+  </header>
 
-   <main>
+  <div id="filter-sort-bar">
+   
+    <div id="filter-bar"> Filtriraj:
+      <input type="text" id="filter-input" placeholder="Išči...">
+      <select id="filter-attr">
+        <option value="avtor">Avtor</option>
+        <option value="vsebina">Vsebina</option>
+        <option value="kategorija">Kategorija</option>
+      </select>
+      <label>
+        <input type="checkbox" id="case-sensitive"> Case-sensitive
+      </label>
+    </div>
+    <div id="sort-bar"> Sortiraj:
+      <select id="sort-attr">
+        <option value=""> Brez sortiranja </option>
+        <option value="avtor">Avtor</option>
+        <option value="datum">Datum</option>
+        <option value="likes">Likes</option>
+        <option value="vsebina">Vsebina</option>
+      </select>
+      <select id="sort-dir">
+        <option value="asc">Naraščajoče</option>
+        <option value="desc">Padajoče</option>
+      </select>
+    </div>
+  </div>
+
+  <main>
     <div id="posts-container"></div>
   </main>
 

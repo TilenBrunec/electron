@@ -15,7 +15,7 @@ function createWindow() {
     },
   });
   mainWindow.loadFile("pages/index.html");
-  mainWindow.webContents.openDevTools();
+  //mainWindow.webContents.openDevTools();
 }
 
 ipcMain.on("open-settings", () => {

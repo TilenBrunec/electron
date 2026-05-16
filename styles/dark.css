@@ -151,3 +151,49 @@ main {
   border-radius: 8px;
   margin-bottom: 14px;
 }
+
+#filter-sort-bar {
+  max-width: 680px;
+  margin: 16px auto 0;
+  padding: 0 16px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+#filter-bar, #sort-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+#filter-input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #d0d7de;
+  font-size: 14px;
+  width: 180px;
+}
+
+#filter-attr, #sort-attr, #sort-dir {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #d0d7de;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+label {
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+#filter-input, #filter-attr, #sort-attr, #sort-dir {
+  background: #242526;
+  color: #e4e6eb;
+  border-color: #3a3b3c;
+}

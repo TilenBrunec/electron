@@ -18,6 +18,8 @@
     "@electron-forge/plugin-auto-unpack-natives": "^7.11.1",
     "@electron-forge/plugin-fuses": "^7.11.1",
     "@electron/fuses": "^1.8.0",
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.8.0",
     "electron": "^42.0.1"
   },
   "dependencies": {
